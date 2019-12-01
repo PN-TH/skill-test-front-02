@@ -10,10 +10,13 @@ import { UserService } from 'src/app/Shared/user.service';
 export class UserComponent implements OnInit {
 
   users: User[] = this.userService.data;
-  
+  userDetail: User;
+
+
   constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.userService.getUsers();
   }
+
 }

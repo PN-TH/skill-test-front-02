@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { User } from './user';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
+  user : User;
   data: User[] = [];
+  id: number;
+
   private apiUrl = 'https://reqres.in/api/users';
 
   constructor(private http: HttpClient) { }
 
-  getUsers() {
-    this.http.get<{data: User[]}>(`${this.apiUrl}`)
-      .pipe(
-        map((response: {data: User[]}) => {
-          return response.data
-        }))
-        .subscribe((response: User[]) => {
-          this.data.push(...response);
-        });
+  getUsers(): Observable<any> {
+    return this.http.get<{data: User[]}>(`${this.apiUrl}`)
+  }
+
+  getIdUser(): Observable<any> {
+    return this.http.get<{data: User[]}>(`${this.apiUrl}`+ this.id)
   }
 }
