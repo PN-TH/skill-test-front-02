@@ -1,40 +1,52 @@
-#list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 20px;
-
+.borderTop {
+    border-bottom: 32px solid #ca4343;
 }
 
-.user {
+#listPage {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    cursor: pointer;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
     
 }
 
-img {
+#lisePage, .userList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: .1em solid rgb(255, 255, 255);
+    width: 15em;
+    height: 13em;
+    border-radius: 0.3em;
+    height: 20em;
+    margin-bottom: 40px;
+    border-bottom: 32px solid #f8f5f0;
+    color: #ca4343;
+
+    
+}
+
+#lisePage, .userList:hover {
+    background-color: #e9e7e3;
+    background: rgba(0, 0, 0, 0.05); 
+    border-bottom: 20px solid #ca4343;
+    font-weight: bold;
+}
+
+#lisePage, .userList img {
     border-radius: 50%;
     margin-bottom: 20px;
+    margin: 0 auto;
+    background: #fff;
+    width: 7em;
+    height: 7em;
+    box-shadow: 0 0 .1em rgba(0, 0, 0, 0.35);
 }
 
-img:hover {
-    transform: scale(1.03)
-}
-
-p {
-    font-weight: bold;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #333;
-}
-
-h1{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #333;
-    font-size: 26px;
-
+#lisePage, .userList img p {
+    font-size: 1em;
 }

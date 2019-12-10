@@ -1,27 +1,141 @@
-#user {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: whitesmoke;
+
+.profilePage {
+  margin: 1em auto;
+  width: 44.23em;
 }
 
-img { width: 200px;
-    border-radius: 50%;
-
+.card {
+  background: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: .1em solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em; 
 }
 
-.name {
-    font-size: 26px;
-    font-weight: bold;
-    color: #333;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.userProfile .userProfileImg {
+  margin: 0 auto;
+  text-align: center; 
 }
 
-.email{
-    font-size: 20px;
-    color: #333;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.arrow {
+    float: left;
+    width: 1.5em;
 }
 
+.arrow:hover {
+    transform: scale(0.95);
+}
 
+.userProfile .userProfileImg .cover {
+  border-bottom: .2em solid #f5f5f5;
+  width: 100%;
+  }
+.userProfile .userProfileImg .avatar {
+  margin: 0 auto;
+  background: #fff;
+  width: 7em;
+  height: 7em;
+  padding: 0.25em;
+  border-radius: 50%;
+  margin-top: -10em;
+  box-shadow: 0 0 .1em rgba(0, 0, 0, 0.35);
+}
+
+.userProfile .dataProfile h1 {
+  font-family: "Lato", sans-serif;
+  margin-top: 0.35em;
+  color: #292f33;
+  margin-bottom: 0.5em; 
+  text-align: center;
+}
+.userProfile .dataProfile p {
+	font-family: "Lato", sans-serif;
+  color: #8899a6; 
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 0.5em; 
+  text-align: center;
+}
+
+.userProfile .follow {
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+.userProfile .follow li {
+  margin: 0;
+  padding: 0;
+  width: 33.33%;
+  text-align: center;
+  border-left: 0.1em solid transparent; 
+}
+
+.userProfile .follow li a, .userProfile .follow li strong {
+  display: flex; 
+  flex-direction: column;
+}
+
+.userProfile .follow li a {
+  background-color: #f7f7f7;
+  border-top: 1px solid rgba(242,242,242,0.5);
+  border-bottom: .2em solid #f7f7f7;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4),0 1px 1px rgba(255,255,255,0.4);
+  padding: .93em 0;
+  color: #46494c; 
+}
+.userProfile .follow li a strong, .userProfile .follow li a span {
+  font-weight: 600;
+  line-height: 1; 
+}
+.userProfile .follow li a strong {
+  font-size: 32px; 
+}
+.userProfile .follow li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 32px solid #ca4343;
+  color: #ca4343; 
+}
+
+@media screen and (max-width: 750px) {
+    .profilePage {
+        margin: 1em auto;
+        width: 30em;
+      }
+      .userProfile .userProfileImg .cover {
+      width: 30em;
+      }
+      .userProfile button {
+        padding: 6px;
+      }
+  }
+
+  @media screen and (max-width: 750px) {
+    .profilePage {
+        margin: 1em auto;
+        width: 30em;
+      }
+      .userProfile .userProfileImg .cover {
+      width: 30em;
+      }
+      .userProfile button {
+        padding: 6px;
+      }
+  }
+
+
+  @media screen and (max-width: 490px) {
+    .profilePage {
+        margin: 1em auto;
+        width: 20em;
+      }
+      .userProfile .userProfileImg .cover {
+      width: 20em;
+      }
+      .userProfile button {
+        padding: 4px;
+      }
+  }

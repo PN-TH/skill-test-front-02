@@ -1,8 +1,8 @@
-<h1>Users</h1>
-
-<section id="list">
-    <div *ngFor="let user of users" class="user">    
-        <img (click)="onUserClicked(user)" src="{{ user.avatar }}"/>
-        <p>{{ user.first_name }}</p>
+<div class="borderTop"></div>
+<div id="listPage">
+    <div *ngFor="let user of users" class="userList" (click)="onUserClicked(user)">  
+            <img class="avatar" src="{{ user.avatar }}"/>
+            <p>{{ user.first_name }}</p>
     </div>
-</section>
+</div>
+
